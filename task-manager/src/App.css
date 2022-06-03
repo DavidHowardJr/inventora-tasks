@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  position: fixed;
+  margin-top: -340px;
+  margin-bottom: 300px;
+  margin-left: -630px;
+}
+
+.App {
+ max-width: 700px;
+ max-height: 100px;
+}
+
+body {
+  background-color: #fcfcfc;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.formInput input {
+  color: rgba(158, 158, 158, 0.801);
+  background-color: transparent;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  padding: 15px 15px;
+  width: 480px;
+}
+
+input:focus {
+  border: 1px solid rgb(187, 187, 187);
+}
+
+input:required:valid {
+  background: rgba(243, 243, 243, 0.712);
+}
+
+.btn-add {
+  cursor: pointer;
+  background-color: #399bb3;
+  border: none;
+  border-radius: 10px;
+  padding: 0 5px;
+  margin-left: 20px;
+}
+
+.btn-add i {
+  color: #ffffff;
+  width: 110px;
+}
+
+.checkAndTask {
+  display: flex;
+  line-height: 25px;
+}
+
+.todo li {
+  display: flex;
+  color: #000000;
+  list-style: none;
+  margin: 20px 0;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 15px 10px 15px 0;
+  justify-content: space-between;
+}
+
+.todo button {
+  background-color: transparent;
+  border: none;
+  color: #eb3a48;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+i {
+  vertical-align: middle;
+}
+
+.deleteAll {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.deleteAll:hover {
+  background-color: #531b1b;
+}
+
+.deleteAll i {
+  margin-right: 15px;
+}
+
+.checkContainer {
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid #555555;
+  border-radius: 5px;
+}
+
+.checkContainer input:checked ~ .checkmark {
+  background-color: #399bb3;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkContainer .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+
+
+

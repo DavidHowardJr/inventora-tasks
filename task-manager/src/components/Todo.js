@@ -7,10 +7,11 @@ const Todo = (props) => {
     return (
     <ul className='todo'>
     <br />
-        <h3>To-Do</h3>
+            <h3>To-Do</h3>
+            <hr />
             {tasks
                 .map((task, index) =>
-                    <li key={index}>
+                <li key={index}>
                         <div className='checkAndTask'>
                             <label className='checkContainer'>
                                 <input type="checkbox" onClick={() => handleComplete(index)} />
@@ -21,6 +22,8 @@ const Todo = (props) => {
                         <button onClick={() => handleRemove(index)}><i className="fa-solid fa-trash-can"></i></button>
                     </li>
             )}
+            <h3>Completed</h3>
+            <hr />
     </ul>
     );
 }
